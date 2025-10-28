@@ -20,23 +20,28 @@ public class Main {
 			
 		if(numbers.size() > 0){ //solution pour question 2.3
 			for(int number : numbers){
-				//check positive or negative
-				if(number > 0){
-					System.out.println(number+" est positif");
-				}
-				else if(number < 0){
-					System.out.println(number+" est negatif");
+				if(number != 0){
+					String positiveOrNegative = "", evenOrOdd = "";
+					
+					//check positive or negative
+					if(number > 0){
+						positiveOrNegative = "positif";
+					}
+					else if(number < 0){
+						positiveOrNegative = "negatif";
+					}
+					
+					//check even or odd
+					if(number % 2 == 0){
+						evenOrOdd = "pair";
+					}
+					else{
+						evenOrOdd = "impair";
+					}
+					System.out.println(number + " est " + positiveOrNegative + " et "+evenOrOdd); 
 				}
 				else{
 					System.out.println("est 0");
-				}
-				
-				//check even or odd
-				if(number % 2 == 0){
-					System.out.println(number+" est pair");
-				}
-				else{
-					System.out.println(number+" est impair");
 				}
 			}
 		}
